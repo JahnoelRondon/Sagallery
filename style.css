@@ -1,0 +1,383 @@
+
+/* add box shadow to the bottom */
+body {
+    background-color: blanchedalmond;
+}
+
+nav {
+    height: 100px;
+    background-color: rgb(48, 20, 22);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 1px 30px black;
+    border-bottom: solid black 1px;
+    /* fixed */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* stacking context */
+    z-index: 1;
+}
+
+.title {
+    color: blanchedalmond;
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 32px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* dropdown */
+#dropdown {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.dropbtn {
+    padding: 12px;
+    font-size: 16px;
+    background-color: blanchedalmond;
+    cursor: pointer;
+    border-bottom: solid black 1px;
+}
+
+.dropdown-content {
+    width: 86px;
+    position: absolute;
+    display: none;
+    background-color: white;
+    /* animation */
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top;
+}
+
+@keyframes growDown {
+    0% {
+      transform: scaleY(0)
+    }
+    100% {
+      transform: scaleY(1)
+    }
+  }
+
+.options {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 8px 16px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: solid black 1px;
+}
+
+.options:hover {
+    background-color: rgb(187, 171, 148);
+}
+
+#dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* 2nd options */
+
+#menu {
+    display: none;
+    margin-right: 20px;
+    width: 300px;
+    height: 50px;
+    justify-content: space-between;
+}
+
+.options2 {
+    padding: 0px 12px;
+    line-height: 50px;
+    font-size: 24px;
+    color: blanchedalmond;
+    cursor: pointer;
+}
+
+.options2:hover {
+    color: white;;
+    animation: options 300ms ease-in-out forwards;
+}
+
+@keyframes options {
+    0% { 
+        font-size: 24px;
+    }
+    50% {
+        font-size: 26px;
+    }
+    100% {
+        font-size: 24px;
+        background-color: rgb(70, 31, 35)
+    }
+}
+
+@keyframes biggeroptions {
+    0% { 
+        font-size: 30px;
+    }
+    50% {
+        font-size: 36px;
+    }
+    100% {
+        font-size: 30px;
+        background-color: rgb(70, 31, 35)
+    }
+}
+
+/* page banner */
+
+#bannercontainer {
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+    margin: 100px 0 20px 0;
+    background-image: url(imgs/Banner.jpg);
+    background-size: cover;
+    background-repeat: none;
+}
+
+/* shades the background image for text to be clearer */
+.bgshade {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#bannercontainer p {
+    font-weight: bold;
+    color: white;
+    font-size: 38px;
+    text-align: center;
+    margin-top: 150px;
+    text-shadow: 3px 3px 6px black;
+}
+
+/* main page */
+
+#historywrapper {
+    margin: 0 auto;
+    width: 90%;
+    padding: 10px;
+}
+
+.segment {
+    height: 50px;
+}
+
+.segment h1 {
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline black 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 70px 280px 150px;
+    grid-template-columns: 1fr;
+}
+
+.arttitle {
+    color: black;
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.arttitle small {
+    font-size: 1rem;
+}
+
+.art {
+    box-shadow: 5px 5px 30px black;
+    background-size: cover;
+}
+
+.description {
+    color: black;
+    padding: 10px;
+}
+
+video {
+    width: 100%;
+    height: 75%;
+    margin-bottom: 20px;
+}
+
+footer {
+    height: 100px;
+    background-color: rgb(34, 34, 34);
+}
+
+
+
+/* Tablet  size*/
+/* () function is a conditional stating if the screen size is =< 600px then execute */
+@media only screen and (min-width: 600px) {
+
+    #dropdown {
+        display: none;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #bannercontainer {
+        height: 500px;
+        margin-bottom: 40px;
+    }
+
+    #bannercontainer p {
+        margin-top: 200px;
+        font-size: 64px;
+    }
+    
+    .segment h1 {
+        line-height: 50px;
+        font-size: 46px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .grid {
+        grid-template-rows: 100px 480px 250px;
+    }
+
+    .arttitle {
+        line-height: 100px;
+        margin-top: 10px;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .arttitle small {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        margin-top: 10px;
+        font-size: 24px;
+    }
+
+  }
+  
+
+@media only screen and (min-width: 900px) {
+
+    .title {
+        font-size: 38px;
+    }
+
+    #bannercontainer {
+        height: 600px;
+    }
+
+    #bannercontainer p {
+        margin-top: 250px;
+        font-size: 76px;
+    }
+
+    .grid {
+        grid-template-rows: 100px 480px;
+        grid-template-columns: 0.7fr 0.3fr;
+        margin-bottom: 100px;
+    }
+
+
+    .arttitle {
+        margin-top: 20px;
+        font-size: 38px;
+        text-align: left;
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+
+    .art {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .description p {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 24px;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    #menu {
+        width: 400px;
+        margin-right: 60px;
+    }
+
+    .options2 {
+        font-size: 30px;
+    }
+
+    .options2:hover {
+        animation: biggeroptions 300ms ease-in-out forwards;
+    }
+
+    .grid {
+        grid-template-rows: 100px 680px;
+        grid-template-columns: 0.6fr 0.27fr;
+    }
+
+    .arttitle {
+        font-size: 44px;
+    }
+
+    .description p {
+        font-size: 30px;
+        text-align: left;
+        margin-left: 20px;
+    }
+}
+
+/* PAINTING ID'S */
+
+#painting1 {
+    background-image: url(imgs/boatlady.PNG);
+}
+
+#painting2 {
+    background-image: url(imgs/ship.PNG);
+}
+
+#painting3 {
+    background-image: url(imgs/drown.jpg);
+}
+
+#painting4 {
+    background-image: url(imgs/wave.PNG)
+}
+
+#painting5 {
+    background-image: url(imgs/Poet_on_a_Mountaintop.jpg)
+}
+
+#painting6 {
+    background-image: url(imgs/ChiuYing.jpg)
+}
+
+#painting7 {
+    background-image: url(imgs/Surrender.jpg)
+}
+
+#painting8 {
+    background-image: url(imgs/May\ 2nd.jpg)
+}
+
+#painting9 {
+    background-image: url(imgs/Parasol.jpg)
+}

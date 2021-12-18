@@ -166,10 +166,6 @@ nav {
     padding: 10px;
 }
 
-.segment {
-    /* height: 50px; */
-}
-
 .segment h1 {
     color: black;
     font-size: 62px;
@@ -217,11 +213,17 @@ video {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100px;
     background-color: rgb(34, 34, 34);
 }
 
-
+footer p {
+    font-size: 14px;
+    color: white;
+}
 
 /* Tablet  size*/
 /* () function is a conditional stating if the screen size is =< 600px then execute */
@@ -247,7 +249,7 @@ footer {
     
     .segment h1 {
         line-height: 50px;
-        font-size: 46px;
+        font-size: 32px;
         font-weight: bold;
         text-align: center;
     }
@@ -271,6 +273,7 @@ footer {
         margin-top: 10px;
         font-size: 24px;
     }
+
 
   }
   
@@ -296,6 +299,9 @@ footer {
         margin-bottom: 100px;
     }
 
+    .segment h1 {
+        font-size: 52px;
+    }
 
     .arttitle {
         margin-top: 20px;
@@ -338,6 +344,11 @@ footer {
         grid-template-columns: 0.6fr 0.27fr;
     }
 
+    .segment h1 {
+        font-size: 62px;
+    }
+
+
     .arttitle {
         font-size: 44px;
     }
@@ -346,6 +357,10 @@ footer {
         font-size: 30px;
         text-align: left;
         margin-left: 20px;
+    }
+
+    footer p {
+        font-size: 24px;
     }
 }
 

@@ -1,7 +1,7 @@
 
 /* add box shadow to the bottom */
 body {
-    background-color: blanchedalmond;
+    background-color: white;
 }
 
 nav {
@@ -21,7 +21,7 @@ nav {
 }
 
 .title {
-    color: blanchedalmond;
+    color: white;
     font-family: 'Cormorant Unicase', serif;
     font-size: 32px;
     margin-left: 10px;
@@ -37,7 +37,7 @@ nav {
 .dropbtn {
     padding: 12px;
     font-size: 16px;
-    background-color: blanchedalmond;
+    background-color: white;
     cursor: pointer;
     border-bottom: solid black 1px;
 }
@@ -94,7 +94,7 @@ nav {
     padding: 0px 12px;
     line-height: 50px;
     font-size: 24px;
-    color: blanchedalmond;
+    color: white;
     cursor: pointer;
 }
 
@@ -167,15 +167,20 @@ nav {
 }
 
 .segment {
-    height: 50px;
+    /* height: 50px; */
 }
 
 .segment h1 {
     color: black;
-    font-size: 32px;
+    font-size: 62px;
+    letter-spacing: 8px;
     font-weight: bold;
     text-align: center;
-    text-decoration: underline black 2px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+
+    padding: 20px 0;
+    text-shadow: 1px 1px 6px rgb(68, 68, 68);
 }
 
 .grid {
